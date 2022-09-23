@@ -1,0 +1,140 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "star-rating",
+    "friendlyName": "star-rating",
+    "description": "A five star component ⭐️",
+    "icon": "Star",
+    "showSettingsBar": true,
+    "settings": [
+      {
+        "type": "field/number",
+        "label": "Field",
+        "key": "field",
+        "required": true
+      },
+      {
+        "type": "text",
+        "label": "Label",
+        "key": "label"
+      },
+      {
+        "type": "number",
+        "key": "numberOfStars",
+        "label": "Number of stars",
+        "defaultValue": 5,
+        "min": 1,
+        "max": 20
+      },
+      {
+        "type": "select",
+        "label": "Size",
+        "key": "size",
+        "defaultValue": "18px",
+        "showInBar": true,
+        "barStyle": "picker",
+        "options": [
+          {
+            "label": "Extra Small",
+            "value": "10px"
+          },
+          {
+            "label": "Small",
+            "value": "14px"
+          },
+          {
+            "label": "Medium",
+            "value": "18px"
+          },
+          {
+            "label": "Large",
+            "value": "24px"
+          },
+          {
+            "label": "Extra Large",
+            "value": "32px"
+          },
+          {
+            "label": "2XL",
+            "value": "42px"
+          },
+          {
+            "label": "Custom",
+            "value": "custom"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "showInBar": true,
+        "label": "Icon",
+        "defaultValue": "star",
+        "key": "type",
+        "options": [
+          {
+            "label": "Stars",
+            "value": "star"
+          },
+          {
+            "label": "Hearts",
+            "value": "heart"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "showInBar": true,
+        "label": "Variant",
+        "defaultValue": "mono",
+        "key": "variant",
+        "options": [
+          {
+            "label": "Primary",
+            "value": "primary"
+          },
+          {
+            "label": "Secondary",
+            "value": "secondary"
+          },
+          {
+            "label": "Mono",
+            "value": "mono"
+          },
+          {
+            "label": "Gold",
+            "value": "gold"
+          },
+          {
+            "label": "Red",
+            "value": "red"
+          },
+          {
+            "label": "Custom",
+            "value": "custom"
+          }
+        ]
+      },
+      {
+        "type": "color",
+        "label": "Colour",
+        "key": "color",
+        "showInBar": true,
+        "barSeparator": false,
+        "dependsOn": {
+          "setting": "variant",
+          "value": "custom"
+        }
+      }
+    ],
+    "context": {
+      "type": "static",
+      "values": [
+        {
+          "key": "Rating",
+          "label": "rating label"
+        }
+      ]
+    }
+  }
+}
