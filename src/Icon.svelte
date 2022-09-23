@@ -2,6 +2,7 @@
   export let filled = false;
 
   export let color;
+  export let customSize;
   export let size;
   export let type;
   export let variant;
@@ -12,11 +13,13 @@
       : "M44.395 25l-19.395 19.395-19.395-19.395a13.714 13.714 90 0 1 19.395-19.395 13.714 13.714 90 0 1 19.395 19.395z";
 
   $: className = filled ? variant : "outline";
+
+  $: di = size === "custom" ? customSize + "px" : size;
 </script>
 
 <svg
-  width={size}
-  height={size}
+  width={di}
+  height={di}
   viewBox="0 0 50 50"
   class="icon"
   on:mouseover
@@ -58,6 +61,6 @@
   }
 
   .custom {
-    fill: var(--rating-custom-color)
+    fill: var(--rating-custom-color);
   }
 </style>

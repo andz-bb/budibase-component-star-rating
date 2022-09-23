@@ -3,7 +3,7 @@
   "metadata": {},
   "schema": {
     "name": "star-rating",
-    "friendlyName": "star-rating",
+    "friendlyName": "Rating",
     "description": "A five star component ⭐️",
     "icon": "Star",
     "showSettingsBar": true,
@@ -65,6 +65,18 @@
           }
         ]
       },
+
+      {
+        "type": "number",
+        "label": "Custom Size (px)",
+        "key": "customSize",
+        "defaultValue": 24,
+        "dependsOn": {
+          "setting": "size",
+          "value": "custom"
+        }
+      },
+
       {
         "type": "select",
         "showInBar": true,
@@ -119,7 +131,6 @@
         "type": "color",
         "label": "Colour",
         "key": "color",
-        "showInBar": true,
         "barSeparator": false,
         "dependsOn": {
           "setting": "variant",

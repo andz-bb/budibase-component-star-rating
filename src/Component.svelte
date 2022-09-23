@@ -3,9 +3,11 @@
   import Icon from "./Icon.svelte";
 
   export let color;
-  export let numberOfStars;
   export let field;
   export let label;
+
+  export let customSize = 24;
+  export let numberOfStars = 5;
   export let size = "24px";
   export let type = "star";
   export let variant = "mono";
@@ -61,6 +63,7 @@
       {#each { length: numberOfStars } as _, i}
         <Icon
           {color}
+          {customSize}
           {size}
           {type}
           {variant}
