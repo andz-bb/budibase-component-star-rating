@@ -73,7 +73,7 @@
           starId={i + 1}
           on:mouseover={() => (hoverRating = i + 1)}
           on:mouseleave={() => (hoverRating = null)}
-          on:click={() => fieldApi.setValue(i + 1)}
+          on:click={() => fieldApi?.setValue(i + 1)}
         />
       {/each}
 

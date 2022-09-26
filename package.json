@@ -1,7 +1,8 @@
 {
   "name": "star-rating",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A five star component :)",
+  "author": "andz-bb",
   "license": "MIT",
   "svelte": "index.js",
   "module": "dist/plugin.min.js",
