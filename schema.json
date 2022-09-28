@@ -137,15 +137,6 @@
           "value": "custom"
         }
       }
-    ],
-    "context": {
-      "type": "static",
-      "values": [
-        {
-          "key": "Rating",
-          "label": "rating label"
-        }
-      ]
-    }
+    ]
   }
 }
