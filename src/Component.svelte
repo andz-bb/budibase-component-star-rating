@@ -76,7 +76,9 @@
           on:click={() => fieldApi?.setValue(i + 1)}
         />
       {/each}
-
+      {#if !field}
+        <div class="error">Please select a field</div>
+      {/if}
       {#if fieldState?.error}
         <div class="error">{fieldState.error}</div>
       {/if}

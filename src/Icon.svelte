@@ -28,7 +28,7 @@
   on:click
   let:class
 >
-  <path class={className} d={path} style="--rating-custom-color: {color}" />
+  <path class={className} d={path} style:--rating-custom-color={color} />
 </svg>
 
 <style>
