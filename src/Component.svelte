@@ -10,6 +10,7 @@
   export let numberOfStars = 5;
   export let size = "24px";
   export let type = "star";
+  export let validation;
   export let variant = "mono";
 
   const { styleable } = getContext("sdk");
@@ -30,7 +31,7 @@
     "number",
     0,
     false,
-    null,
+    validation,
     formStep
   );
 

@@ -136,6 +136,11 @@
           "setting": "variant",
           "value": "custom"
         }
+      },
+      {
+        "type": "validation/number",
+        "label": "Validation",
+        "key": "validation"
       }
     ]
   }
