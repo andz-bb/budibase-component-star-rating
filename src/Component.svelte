@@ -3,6 +3,7 @@
   import Icon from "./Icon.svelte";
 
   export let color;
+  export let disabled;
   export let field;
   export let label;
 
@@ -19,6 +20,7 @@
   const formStepContext = getContext("form-step");
   const fieldGroupContext = getContext("field-group");
 
+  let defaultValue = disabled ? null : 0;
   let fieldApi;
   let fieldState;
   let hoverRating = 0;
@@ -29,7 +31,7 @@
   $: formField = formApi?.registerField(
     field,
     "number",
-    0,
+    defaultValue,
     false,
     validation,
     formStep
@@ -72,9 +74,9 @@
             ? hoverRating >= i + 1
             : fieldState?.value >= i + 1}
           starId={i + 1}
-          on:mouseover={() => (hoverRating = i + 1)}
-          on:mouseleave={() => (hoverRating = null)}
-          on:click={() => fieldApi?.setValue(i + 1)}
+          on:mouseover={disabled ? null : () => (hoverRating = i + 1)}
+          on:mouseleave={disabled ? null : () => (hoverRating = null)}
+          on:click={disabled ? null : () => fieldApi?.setValue(i + 1)}
         />
       {/each}
       {#if !field}

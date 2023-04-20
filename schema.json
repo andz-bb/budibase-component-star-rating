@@ -4,6 +4,7 @@
   "schema": {
     "name": "star-rating",
     "friendlyName": "Rating",
+    "requiredAncestors": ["form"],
     "description": "A five star component ⭐️",
     "icon": "Star",
     "showSettingsBar": true,
@@ -26,6 +27,12 @@
         "defaultValue": 5,
         "min": 1,
         "max": 20
+      },
+      {
+        "type": "boolean",
+        "label": "Disabled",
+        "key": "disabled",
+        "defaultValue": false
       },
       {
         "type": "select",
