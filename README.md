@@ -1,4 +1,8 @@
 # star-rating
+## 2025 update: deprecated because I built the Rating component natively into Budibase.
+## [pull request](https://github.com/Budibase/budibase/pull/15906) | [docs](https://docs.budibase.com/docs/rating)
+
+---
 
 ### a Budibase form component
 
