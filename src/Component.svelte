@@ -20,7 +20,7 @@
   const formStepContext = getContext("form-step");
   const fieldGroupContext = getContext("field-group");
 
-  let defaultValue = disabled ? null : 0;
+  export let defaultValue = 0;
   let fieldApi;
   let fieldState;
   let hoverRating = 0;
@@ -31,7 +31,7 @@
   $: formField = formApi?.registerField(
     field,
     "number",
-    defaultValue,
+    disabled ? null : defaultValue,
     false,
     validation,
     formStep
