@@ -16,6 +16,11 @@
         "required": true
       },
       {
+        "type": "number",
+        "label": "Initial Value",
+        "key": "defaultValue"
+      },
+      {
         "type": "text",
         "label": "Label",
         "key": "label"
